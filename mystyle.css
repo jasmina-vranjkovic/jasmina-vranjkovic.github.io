@@ -1,0 +1,384 @@
+/*! normalize.css v1.0.1 | MIT License | git.io/normalize */article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}button,html,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:after,q:before{content:'';content:none}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ol,nav ul{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline}button,input{line-height:normal}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+* {
+box-sizing: border-box;
+}
+
+html, body {
+	height: 100%; /* why 100% */
+}
+
+body {
+	font-family: "Playfair Display";
+	background-color: #f7f7f7;
+	background-image: url("images/background.png");
+	background-size: 100%;
+}
+
+body a { /* https://stackoverflow.com/questions/8919682/remove-all-styling-formatting-from-hyperlinks */
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+#logo { /* this refers to id="logo", # means id in CSS, .something refers to class in HTML class="something" */
+	width: 70px;
+	height: 70px;
+	margin-left: 15px; /* it's easier to test this with inspect in browser */
+	margin-top: 25px;
+	top: 0;
+	position: fixed; /* this is postion on a screen*/
+	z-index: 10; /* it gives this element a priority */
+}
+
+#hamburger-menu-icon {
+	position: fixed;
+	top:0px;
+	right: 0;
+	z-index: 10;
+	background-image: url("images/hamburger-menu.svg"); /*https://www.iconfinder.com/icons/134216/hamburger_lines_menu_icon*/
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 50px;
+    height: 70px;
+    margin-right: 15px;
+    margin-top: 25px;
+	cursor: pointer;
+}
+
+#hamburger-menu-icon.clicked {
+	background-image: url("images/hamburger-menu-close.svg");
+}
+
+#hamburger-menu {
+	top:0;
+	right: 0;
+	position: fixed;
+	width: 0;
+	height: 100%;
+	background-color: white;
+	transition: width 1s;
+	overflow: hidden;
+	background-image: url("images/background.png");
+}
+
+#menu-links {
+	position: relative;
+	top: 20%;
+}
+
+#menu-links .menu-item {
+	display: block;
+	font-size: 46px;
+	text-align: right;
+	padding-right: 10%;
+}
+
+.page {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.text-wrapper {
+	/*this one is needed to put the padding */
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-right: 10%;
+	padding-left: 10%;
+}
+
+#page1-content #title {
+	position: relative;
+	font-family: Montserrat;
+	font-size: 46px;
+	top: 20%;
+
+}
+#page1-content #sub-title {
+	position: relative;
+	font-size: 26px;
+	top: 24%;
+}
+	
+#why {
+	position: relative;
+	top: 36%;
+	font-size: 36px;
+	font-weight: bold;
+    text-align: right; /* it's left or right only */
+}
+
+
+#page1 {
+}
+
+#page2 {
+	background-color: #292828;
+	color: #ffffff; 
+}
+
+.tabs {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	font-size: 32px;
+	text-align: center;
+	word-spacing: 30px;
+	padding-top: 140px;
+}
+
+#page2 label {
+	cursor: pointer;
+	font-size: 32px;
+	display: block;
+	position: absolute;
+	width: 20%;
+	text-align: center;
+	line-height: 120px;
+	word-break: keep-all;
+}
+
+#page2 input {
+	display: none;
+}
+
+/* solution taken from here: https://uicookies.com/css-tabs/ */
+.menu2 {
+    display: none;
+    height: 100%;
+	padding-top: 120px;
+	font-size: 22px;
+}
+
+#label1 {
+	left:10%;
+}
+#label2 {
+	left:30%;
+}
+#label3 {
+	left:50%;
+}
+#label4 {
+	left:70%;
+}
+
+input:checked + label {
+	text-decoration: underline;
+}
+
+#radio1:checked ~ #about,  /* ~ means sibling, an element with same indentation, it always looks down */
+#radio2:checked ~ #mission, 
+#radio3:checked ~ #innovation, 
+#radio4:checked ~ #hip-hop {
+	display: block;
+}
+
+#mission {
+	background-image: url("images/dog.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+#innovation {
+	background-image: url("images/vr.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+#hip-hop {
+	background-image: url("images/hip-hop.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	
+}
+/* ctrl + ? - to comment*/
+
+#page3 .text-wrapper {
+	padding-top: 10%;
+}
+
+#page3 .text-wrapper h1 {
+	height: 10%;
+}
+
+#ratings {
+	height: 60%;
+}
+
+.rating-text {
+	font-style: italic;
+	font-size: 18px;
+}
+
+.rating-person {
+	text-align: right;
+	font-weight: bold;
+	font-size: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#facebook-rating {
+	text-align: right;
+	width: 100%;
+	height: 15%;
+}
+
+#facebook-rating img {
+	max-height:100%;
+}
+
+#page4 {
+	background-color: #292828;
+}
+
+.artist {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 40%;
+	width: 30%; 
+	position: absolute;
+	color: #ffffff;
+}
+
+.artist h1 {
+	text-align: center;
+	line-height: 32px;
+	width: 50%;
+	font-size: 24px;
+}
+
+.artist h1 span { /* span is a plain inline element */
+	font-family: "Gloria Hallelujah";
+}
+
+.artist h2 {
+	display: none;
+	font-size: 18px;
+}
+
+.artist:hover h2 {
+	display: block;
+}
+
+#artist1 {
+	background-image: url("images/artist1.png");
+	left: calc(49% - 30%);
+	top: 8%;
+}
+#artist2 {
+	background-image: url("images/artist2.png");
+	left: 51%;
+	top: 8%;
+}
+#artist3 {
+	background-image: url("images/artist3.png");
+	left: calc(49% - 30%);
+	top: 52%;
+}
+#artist4 {
+	background-image: url("images/artist4.png");
+	top: 52%;
+	left: 51%;
+}
+
+#artist1:hover {
+	background-image: url("images/artist1-hover.png");
+}
+#artist2:hover {
+	background-image: url("images/artist2-hover.png");
+}
+#artist3:hover {
+	background-image: url("images/artist3-hover.png");
+}
+#artist4:hover {
+	background-image: url("images/artist4-hover.png");
+}
+
+#page5 .text-wrapper {
+	text-align: right;
+	position: absolute;
+	height: 85%;
+	bottom: 0;
+	right: 0;
+}
+
+#page5 #map {
+	width: 100%;
+	height: 80%;
+}
+
+/*https://stackoverflow.com/questions/31943618/how-to-scale-an-image-with-css-to-fill-a-div-keeping-aspect-ratio*/
+#page5 #map img {
+	width:100%;
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#footer ul {
+	margin-top: 5%;
+}
+
+#footer ul li {
+	display:inline;
+	height: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+	#page2 label {
+		font-size: 24px;
+		width: 40%;
+		line-height: 60px;
+	}
+	#label2 {
+		left:50%;
+	}
+	#label3 {
+		left:10%;
+		top:60px;
+	}
+	#label4 {
+		left:50%;
+		top:60px;
+	}
+	#logo {
+		width: 40px;
+		height: 40px;
+		margin-left: 5px;
+		margin-top: 10px;
+	}
+
+	#hamburger-menu-icon {
+		width: 30px;
+	    height: 30px;
+	    margin-right: 5px;
+	    margin-top: 10px;
+	}
+
+	.menu2 {
+		font-size: 16px;
+	}
+
+	#ratings {
+		height: 70%;
+	}
+
+	#facebook-rating {
+		height: 10%;
+	}
+	
+	.artist h1 {
+		font-size: 18px;
+	}
+	.artist h2 {
+		font-size: 12px;
+	}
+}
+

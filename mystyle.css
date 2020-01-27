@@ -12,7 +12,6 @@ body {
 	font-family: "Playfair Display";
 	background-color: #f7f7f7;
 	background-image: url("images/background.png");
-	background-size: 100%;
 }
 
 body a { /* https://stackoverflow.com/questions/8919682/remove-all-styling-formatting-from-hyperlinks */
@@ -114,7 +113,7 @@ body a { /* https://stackoverflow.com/questions/8919682/remove-all-styling-forma
 }
 
 #page2 {
-	background-color: #292828;
+	background-color: #383737;
 	color: #ffffff; 
 }
 
@@ -234,7 +233,7 @@ input:checked + label {
 }
 
 #page4 {
-	background-color: #292828;
+	background-color: #383737;
 }
 
 .artist {

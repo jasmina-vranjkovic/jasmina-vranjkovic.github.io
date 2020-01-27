@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rome and Juliet</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="mystyle.css">
+	<link rel="style" href="style.css">
+	<!-- https://www.w3schools.com/howto/tryit.asp?font=Gloria%20Hallelujah -->
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Gloria Hallelujah" rel="stylesheet">
+	<script type="text/javascript">
+		function showHideMenu() {
+			var x = document.getElementById("hamburger-menu");
+			var icon = document.getElementById("hamburger-menu-icon");
+			if (x.style.width === "100%") {
+				x.style.width = "0%";
+				icon.classList.remove("clicked");
+			} else {
+		 		x.style.width = "100%";
+				icon.classList.add("clicked");
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<!-- indentation of open and close tag should be on the same level -->
+	<div id="log">
+		<a href="index.html">
+			<!-- <img /> img must be closed with / -->
+			<img src="images/logo1.svg" alt="logo" id="logo" />
+		</a>
+	</div>
+
+	<div id="hamburger-menu-icon" onclick="showHideMenu()">
+	</div>
+
+	<div id="page1" class="page">
+		<div id="page1-content" class="text-wrapper">
+			<div id="title">Romeo and Juliet</div>
+			<!-- & char must be replaced with &amp; -->
+			<div id="sub-title">
+				Dive in  to the deepest parts of your heart and see the light in the darkest ending. <br />
+				<br />
+				Love doesn't end, let life win.
+			</div>
+			
+			<div id="why">
+				<a href="#page3">Why attent?</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="page2" class="page">
+
+		<input id="radio1" type="radio" name="css-tabs" checked />
+		<label id="label1" for="radio1">About</label> <!-- text that stands next to radio button, if text is clicked radio button is selected -->
+		<input id="radio2" type="radio" name="css-tabs" />
+		<label id="label2" for="radio2">Mission</label>
+		<input id="radio3" type="radio" name="css-tabs" />
+		<label id="label3" for="radio3">Innovation</label>
+		<input id="radio4" type="radio" name="css-tabs" />
+		<label id="label4" for="radio4">Hip-Hop</label>
+
+		<div id="about" class="menu2">
+			<div class="text-wrapper">
+				<p>
+					<br />
+					This drama is a complex and powerful Hip-Hop performance of Romeo and Juliet. <br />
+					With music, dance and VR it is very immersive experience that inspires. <br />
+					This production is realised by a young creative team led by experienced director John Murphy and promises a fresh new take on a classic. <br />
+					<br />
+					Venue: Abbey Theatre <br />
+					 <br />
+					Preview: 25 Sept, 7.30pm <br />
+ 					<br />
+					Date(s): 25-27 Sept, & 1, 2 & 4 Oct, 7.30pm <br />
+					28 Sept & 3 & 5 Oct, 2.30pm & 7.30pm <br />
+					29 Sept, 4.30pm <br />
+					<br />
+					Duration <br />
+					Approx. 2hrs 15 mins incl. interval.
+				</p>
+			</div>
+		</div>
+
+		<div id="mission" class="menu2">
+			<div class="text-wrapper">
+				<p>
+					<br />
+					Ireland has one of the highest teenage suicide rates in EU. <br />
+					<br />
+					Romeo and Juliet is a classical play that ends with a teen suicide and we want to raise awareness for this topic. <br />
+					Through our performance we want to show the audience the importance of unity and helping each other. <br />
+					We collaborated with different community-based organisations, <br />
+					HSE and National Office for Suicide Prevention while aproaching this topic.
+				</p>
+			</div>
+		</div>
+		
+		<div id="innovation" class="menu2">
+			<div class="text-wrapper">
+				<p>
+					<br />
+					Romeo and Juliet  is an innovative storytelling experience using live actors in VR. <br />
+					<br />
+					As we put on VR goggles we enter a new world, <br />
+					World full of colors, music, dancers… <br />
+					During this performance, while diving in immersive experience we hear narrator quoting original verses,<br />
+					linking this new take with a classic Romeo and Juliet play.
+				</p>
+			</div>
+		</div> 
+		
+		<div id="hip-hop" class="menu2"> <!-- for id put - instead of spaces -->
+			<div class="text-wrapper">
+				<p>
+					<br />
+					Romeo and Juliet in this performance are teens from this day and age. <br />
+					<br />
+					They love hip hop, they are great dancers, they are kids that you can see at street, school… <br />
+					Hip hop is music that bring energy and easily describes emotions and struggles <br />
+					Through dance and music our performers make this classical story much more reliable <br />
+					and teen suicide prevention message closer to people that need to her it.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="page3" class="page">
+		<div class="text-wrapper">
+			<h1>Why attend?</h1>
+			<div id="ratings">
+				<div class="rating">
+					<div class="rating-text">
+						"The play was awesome. We were engage during the whole play. I've never see anything like that. Would definitively recommend it."
+					</div>
+					<div class="rating-person">
+						Aoife 17 years, student at Lorreto College Dublin
+					</div>
+				</div>
+				<div class="rating">
+					<div class="rating-text">
+						"The way Hip-hop integrates into the play is brilliant. Very modern performance, something my generation can related to."
+					</div>
+					<div class="rating-person">
+						Oisin 16 years, student at Coaliste Choilm
+					</div>
+				</div>
+				<div class="rating">
+					<div class="rating-text">
+						"This play is something teenages needed. Talking about serious topic through new modern techniques that are interested and appealing to them."
+					</div>
+					<div class="rating-person">
+						Gearoid, professor at St. Fintan's High School
+					</div>
+				</div>
+			</div>
+			<div id="facebook-rating">
+				<img src="images/facebook-rating.jpg" alt="rating" />
+			</div>
+		</div>
+	</div>
+
+	
+	<div id="page4" class="page">
+		<div id="artist1" class="artist">
+			<h1>Ruth Walsh<br />as<br /><span>Juliet</span></h1> <!-- br - break line -->
+			<h2>While searching for ways to heal myself and I found that kindness is the best way</h2>
+		</div>
+		
+		<div id="artist2" class="artist">
+			 <h1>Jacob Murphy<br />as<br /><span>Romeo</span></h1>
+			 <h2>Struggle and pain is real, We’ve all been there on some level or another</h2>
+		  </div>
+		
+		<div id="artist3" class="artist">
+			<h1>Paul Lynch<br />as<br /><span>Mercutio</span></h1>
+			<h2>There are people who feel that exact same thing and have made it through that, you're not alone in it</h2>
+		</div>
+		
+		<div id="artist4" class="artist">
+			<h1>David  Nolan<br />as<br /><span>Tybalt</span></h1>
+			<h2>Because someone didn’t love me that didn’t mean I was unlovable</h2>
+		</div>
+	</div>
+
+	<div id="page5"  class="page">
+		<div class="text-wrapper">
+			<div id="map">
+				<img src="images/map.png" />
+			</div>
+			<div id="footer">
+				<ul>
+					<li><a href="https://www.facebook.com"><img src="images/facebook.png"></a></li>
+					<li><a href="https://www.twitter.com"><img src="images/twitter.png"></a></li>
+					<li><a href="https://www.instagram.com"><img src="images/insta.png"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="hamburger-menu">
+		<div class="close-menu"></div>
+		<div id="menu-links">
+			<div class="menu-item"><a href="#page2" onclick="showHideMenu()">About</a></div>
+			<div class="menu-item"><a href="https://www.ticketmaster.ie/">Tickets</a></div>
+			<div class="menu-item"><a href="#page4" onclick="showHideMenu()">Performers</a></div>
+			<div class="menu-item"><a href="#page5" onclick="showHideMenu()">Contact</a></div>
+		</div>
+	</div>
+</body>
+</html>
